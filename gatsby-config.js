@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -34,7 +38,7 @@ module.exports = {
       options: {
         spaceId: `b855ot3393a3`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `5w3jR02R8STpxGk4cFMmEgCQMcQP8WFj1719TJc9NHM`,
+        accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
   ],
