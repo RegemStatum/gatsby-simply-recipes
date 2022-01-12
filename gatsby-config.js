@@ -29,12 +29,13 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `styles`,
-    //     path: `${__dirname}/src/assets/css`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `b855ot3393a3`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `5w3jR02R8STpxGk4cFMmEgCQMcQP8WFj1719TJc9NHM`,
+      },
+    },
   ],
 }
